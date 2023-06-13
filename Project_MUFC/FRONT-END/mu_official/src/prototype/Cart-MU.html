@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <style>
+        /* CSS styles for the cart */
+        .cart-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+        }
+
+        .cart-item-details {
+            flex-grow: 1;
+        }
+
+        .cart-item-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-price {
+            color: #888;
+        }
+
+        .cart-item-remove {
+            color: #f00;
+            cursor: pointer;
+        }
+
+        .cart-total {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="cart-container">
+    <h1>SHOPING CART</h1>
+    <div class="cart-item">
+        <img src="https://images.footballfanatics.com/manchester-united/manchester-united-adidas-training-jersey-white_ss4_p-13384936+u-19l4brib946wtc4dygwc+v-4af8859f976f4d428da9f9cfd49ac02e.jpg?_hv=2&w=900" alt="Product 1" class="cart-item-image">
+        <div class="cart-item-details">
+            <div class="cart-item-title">Product 1</div>
+            <div class="cart-item-price">$10.00</div>
+        </div>
+        <div class="cart-item-remove">Remove</div>
+    </div>
+
+    <div class="cart-item">
+        <img src="https://images.footballfanatics.com/manchester-united/manchester-united-adidas-training-jersey-white_ss4_p-13384936+u-19l4brib946wtc4dygwc+v-4af8859f976f4d428da9f9cfd49ac02e.jpg?_hv=2&w=900" alt="Product 2" class="cart-item-image">
+        <div class="cart-item-details">
+            <div class="cart-item-title">Product 2</div>
+            <div class="cart-item-price">$15.00</div>
+        </div>
+        <div class="cart-item-remove">Remove</div>
+    </div>
+
+    <div class="cart-item">
+        <img src="https://images.footballfanatics.com/manchester-united/manchester-united-adidas-training-jersey-white_ss4_p-13384936+u-19l4brib946wtc4dygwc+v-4af8859f976f4d428da9f9cfd49ac02e.jpg?_hv=2&w=900" alt="Product 3" class="cart-item-image">
+        <div class="cart-item-details">
+            <div class="cart-item-title">Product 3</div>
+            <div class="cart-item-price">$20.00</div>
+        </div>
+        <div class="cart-item-remove">Remove</div>
+    </div>
+
+    <div class="cart-total">
+        Total: $45.00
+    </div>
+</div>
+</body>
+</html>
