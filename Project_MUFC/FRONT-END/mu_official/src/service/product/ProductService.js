@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const findAll = async () => {
+const findAll = async () => {
     try {
         const result = await axios.get(
             "http://localhost:8080/api/public/product-list"
@@ -10,3 +10,7 @@ export const findAll = async () => {
         console.log(error);
     }
 };
+
+export  {
+    findAll
+}
