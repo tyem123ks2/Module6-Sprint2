@@ -2,10 +2,10 @@ import {useEffect, useState} from "react";
 import {findAll} from "../service/product/ProductService";
 
 const ProductListUser = function () {
-    const [product, setProduct] = useState([]);
+    const [products, setProducts] = useState([]);
     const productList = async () => {
         const result = await findAll();
-        setProduct(result0);
+        setProducts(result);
     };
 
     useEffect(() => {
@@ -26,29 +26,26 @@ const ProductListUser = function () {
                                         fontWeight: 600,
                                     }}
                                 >
-                                    Khuyến mãi - sự kiện
+                                   FASHION LIST
                                 </h3>
                             </div>
                         </div>
                         <div class="row mx-0 ps-5">
-                            {discounts.map((discount) => (
+                            {products.map((product) => (
                                 <div className="col-md-4 container" style={{ paddingTop: 20 }}>
                                     <div
                                         className="card"
                                         style={{ width: 400, backgroundColor: "rgb(0 0 0)" }}
                                     >
-                                        <Link to={"/detail-discount/" + discount.idDiscount}>
+                                        <Link to={"/detail-discount/" + product.id}>
                                             <img
                                                 style={{ height: 400 }}
-                                                src={discount.imageDiscount}
+                                                src={product.imageProduct}
                                                 className="image"
                                             />
                                             <div className="readmore">
                                                 <p style={{ color: "white" }}>
-                                                    <b>{discount.nameDiscount}</b>
-                                                    <p>Ngày bắt đầu: {discount.dateStart}</p>
-                                                    <p>Ngày kết thúc: {discount.dateEnd}</p>
-                                                    <p>Giảm giá: {discount.percentDiscount}%</p>
+                                                    <b>{product.name}</b>
                                                 </p>
                                                 <div className="text" style={{ marginTop: 200 }}>
                                                     Chi tiết
