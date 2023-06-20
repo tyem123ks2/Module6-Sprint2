@@ -1,5 +1,6 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {findAll} from "../service/product/ProductService";
+import Footer from "./common/footer/Footer";
 
 const ProductListUser = function () {
     const [products, setProducts] = useState([]);
@@ -13,10 +14,9 @@ const ProductListUser = function () {
     }, [])
     return (
         <>
-            <Header />
-            <div style={{ margin: "150px 0" }}>
-                <div class="row mx-0 ">
-                    <div class="event">
+            <div style={{margin: "150px 0"}}>
+                <div className="row mx-0 ">
+                    <div className="event">
                         <div className="row mx-0 ps-5">
                             <div>
                                 <h3
@@ -26,32 +26,35 @@ const ProductListUser = function () {
                                         fontWeight: 600,
                                     }}
                                 >
-                                   FASHION LIST
+                                    ?
                                 </h3>
                             </div>
                         </div>
                         <div class="row mx-0 ps-5">
                             {products.map((product) => (
-                                <div className="col-md-4 container" style={{ paddingTop: 20 }}>
-                                    <div
-                                        className="card"
-                                        style={{ width: 400, backgroundColor: "rgb(0 0 0)" }}
-                                    >
-                                        <Link to={"/detail-discount/" + product.id}>
+                                <div className="col-md-4 container">
+                                    <div className="card">
+                                        <div className="card-img">
                                             <img
                                                 style={{ height: 400 }}
-                                                src={product.imageProduct}
+                                                src={product.imgProduct}
                                                 className="image"
-                                            />
-                                            <div className="readmore">
-                                                <p style={{ color: "white" }}>
-                                                    <b>{product.name}</b>
-                                                </p>
-                                                <div className="text" style={{ marginTop: 200 }}>
-                                                    Chi tiết
-                                                </div>
+                                             alt={product.imgProduct}/>
+                                        </div>
+                                        <div className="card-details">
+                                            <div className="price">
+                                                <p style={{ color: "red" }}>Reduced: <strong style={{ color: "red" }}>£{product.sellPrice}</strong></p>
+                                                <span className="strikethrough"> Regular: £{product.price}</span>
                                             </div>
-                                        </Link>
+                                        </div>
+                                        <div className="card-header">
+                                            <p>{product.name}</p>
+                                            <span>New</span>
+                                        </div>
+
+                                        <div className="card-footer">
+                                            <button>Buy now</button>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -60,7 +63,6 @@ const ProductListUser = function () {
                 </div>
             </div>
             <Footer />
-
         </>
     )
 }

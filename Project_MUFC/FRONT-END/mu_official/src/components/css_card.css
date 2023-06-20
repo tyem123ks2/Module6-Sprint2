@@ -16,7 +16,7 @@ body {
 
 .card {
     position: relative;
-    width: 290px;
+    width: 380px;
     height: min-content;
     padding: 25px;
     background: #ffffff;
@@ -38,7 +38,7 @@ body {
 
 .card .card-header p {
     color: #757d8a;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .card .card-header span {
@@ -46,7 +46,7 @@ body {
     color: #f43c3c;
     background: #fef0f0;
     right: 25px;
-    top: 10px;
+    top: 25px;
     padding: 5px 10px;
     border-radius: 12px;
     font-size: 18px;
@@ -73,8 +73,8 @@ body {
 .card .card-img i {
     cursor: pointer;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 12px;
+    right: 12px;
     color: #757d8a;
     background: #ffffff;
     padding: 6px;
@@ -94,7 +94,7 @@ body {
 
 .card .card-details .price strong {
     color: #545d6d;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .card .card-details .colors {

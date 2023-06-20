@@ -1,6 +1,5 @@
 package com.example.official_manchesterunited.repository.product;
 
-import com.example.official_manchesterunited.dto.product.ProductDTO;
 import com.example.official_manchesterunited.model.product.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
